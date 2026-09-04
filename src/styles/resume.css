@@ -1,0 +1,44 @@
+:root { font-family: Arial, Helvetica, sans-serif; color: #111; background: #e8eaed; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+.resume-page { padding: 28px 16px 64px; }
+.resume-toolbar { width: 210mm; max-width: 100%; margin: 0 auto 16px; display: flex; justify-content: space-between; align-items: center; font: 600 14px/1.2 Arial, sans-serif; }
+.resume-toolbar a { color: #24324a; }
+.resume-toolbar button { border: 0; border-radius: 999px; padding: 11px 18px; background: #0a1733; color: white; font: inherit; cursor: pointer; }
+.resume-sheet { width: 210mm; min-height: 297mm; margin: 0 auto; padding: 9.5mm 12mm 8mm; background: white; box-shadow: 0 18px 60px rgba(20,31,48,.18); font-size: 9.25pt; line-height: 1.23; }
+.resume-header { text-align: center; border-bottom: 1.6pt solid #111; padding-bottom: 4pt; }
+.resume-header h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 22pt; line-height: 1; letter-spacing: -.3pt; }
+.resume-title { margin: 3pt 0 4pt; font-size: 9.2pt; font-weight: 700; }
+.resume-header address { display: flex; flex-wrap: wrap; justify-content: center; gap: 1pt 8pt; font-style: normal; font-size: 8.2pt; }
+.resume-header address > *:not(:last-child)::after { content: "  •"; padding-left: 8pt; color: #555; }
+.resume-section { margin-top: 5pt; }
+.resume-section h2 { margin: 0 0 2.5pt; border-bottom: 1.2pt solid #111; font-family: Georgia, "Times New Roman", serif; font-size: 10.4pt; line-height: 1.15; letter-spacing: .45pt; text-transform: uppercase; }
+.resume-summary p, .resume-skills p, .resume-innovation p { margin: 1pt 0; }
+.resume-job { margin-top: 4pt; }
+.resume-job-heading, .resume-education { display: flex; justify-content: space-between; align-items: start; gap: 12pt; }
+.resume-job-heading h3, .resume-education h3 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 10pt; line-height: 1.12; }
+.resume-job-heading p, .resume-education p { margin: .7pt 0 0; font-weight: 600; }
+.resume-job-heading > div:last-child, .resume-education > div:last-child { text-align: right; white-space: nowrap; font-size: 8.6pt; }
+.resume-job-heading span, .resume-education span { display: block; margin-top: .7pt; }
+.prior-roles { margin: 1.7pt 0 0; font-size: 8.2pt; font-style: italic; }
+.resume-job ul { margin: 2pt 0 0; padding-left: 13pt; }
+.resume-job li { margin: 1.45pt 0; padding-left: 1pt; }
+.resume-education { margin-top: 3pt; }
+.resume-innovation { margin-top: 4pt; }
+
+@media (max-width: 840px) {
+  .resume-page { padding-inline: 0; overflow-x: auto; }
+  .resume-toolbar { width: calc(100vw - 24px); position: sticky; left: 12px; }
+  .resume-sheet { transform-origin: top left; }
+}
+
+@page { size: A4; margin: 0; }
+@media print {
+  :root { background: white; }
+  body { width: 210mm; height: 297mm; }
+  .resume-page { padding: 0; }
+  .resume-toolbar { display: none !important; }
+  .resume-sheet { width: 210mm; height: 297mm; min-height: 0; margin: 0; box-shadow: none; overflow: hidden; }
+  a { color: black; }
+}
