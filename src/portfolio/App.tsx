@@ -21,7 +21,8 @@ const notableEvents = [
 ] as const;
 
 function ThemeControl({ value, onChange }: { value: ThemePreference; onChange: (theme: ThemePreference) => void }) {
-  return <div className="og-theme-control" aria-label="Color theme"><span aria-hidden="true">☀️</span>{(["light", "auto", "dark"] as ThemePreference[]).map((theme) => <button type="button" key={theme} className={value === theme ? "active" : ""} aria-label={theme === "auto" ? "Use system theme" : `Use ${theme} theme`} aria-pressed={value === theme} onClick={() => onChange(theme)}>{theme === "auto" ? "A" : ""}</button>)}<span aria-hidden="true">🦉</span></div>;
+  const labels: Record<ThemePreference, string> = { light: "☀️", auto: "A", dark: "🦉" };
+  return <div className="og-theme-control" aria-label="Color theme">{(["light", "auto", "dark"] as ThemePreference[]).map((theme) => <button type="button" key={theme} className={value === theme ? "active" : ""} aria-label={theme === "auto" ? "Use system theme" : `Use ${theme} theme`} aria-pressed={value === theme} onClick={() => onChange(theme)}>{labels[theme]}</button>)}</div>;
 }
 
 function LaptopCodeIcon() {
