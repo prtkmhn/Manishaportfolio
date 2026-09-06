@@ -7,7 +7,7 @@ const navItems = [
   ["contact", "Contact", "✉"],
 ] as const;
 
-const rotatingTitles = ["Software Development Engineer at AWS", "Database & Backend Engineer", "SDE II–ready Technical Owner"] as const;
+const rotatingTitles = ["Software Development Engineer at AWS", "Database & Backend Engineer", "Technical Owner & Team Multiplier"] as const;
 const projectDates: Record<string, string> = { "Game Night Recommender": "Apr 2024", "Snake Programming Language": "Apr 2023", "Portable Fetal Monitoring": "Jun 2019" };
 const otherRoles = [
   { title: "Graduate Services Assistant", org: "Arizona State University", dates: "Jan 2024 – May 2024", logo: "images/logos/asu.png" },
